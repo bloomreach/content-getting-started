@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import axios from "axios";
+import {BrPage} from "@bloomreach/react-sdk";
 
 function App() {
   return (
@@ -9,16 +11,33 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <BrPage configuration={{
+          endpoint: 'https://trial-n7r2nj4o.bloomreach.io/delivery/site/v1/channels/getting-started/pages',
+          httpClient: axios
+        }} mapping={{Content}}>
+        </BrPage>
+
       </header>
     </div>
+  );
+}
+
+function Content({component, page}) {
+
+  const document = page?.getDocument();
+
+  if (!document) {
+    return null;
+  }
+
+  const {title, content, introduction} = document.getData();
+
+  return (
+      <>
+        <h1>{title}</h1>
+        <p>{introduction}</p>
+        <div dangerouslySetInnerHTML={{__html: content.value}}/>
+      </>
   );
 }
 

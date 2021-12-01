@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Bloomreach Headless Experience Manager Integration
+
+### Milestone 1: Hello World
+
 ## Available Scripts
 
 In the project directory, you can run:
