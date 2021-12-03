@@ -15,10 +15,22 @@ function App() {
                     path: `${window.location.pathname}${window.location.search}`,
                     endpoint: 'https://kenan.bloomreach.io/delivery/site/v1/channels/getting-started/pages',
                     httpClient: axios
-                }} mapping={{Content}}>
+                }} mapping={{Content, MyComponent}}>
                 </BrPage>
 
             </header>
+        </div>
+    );
+}
+
+function MyComponent({component, page}) {
+
+    const {title, showTitle} = component.getParameters();
+
+    return (
+        <div>
+            <h3>{component.getName()}</h3>
+            {showTitle && <h3>{title}</h3>}
         </div>
     );
 }
