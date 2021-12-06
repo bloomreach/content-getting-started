@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import axios from "axios";
 import {BrPage} from "@bloomreach/react-sdk";
+import {getContainerItemContent} from "@bloomreach/spa-sdk";
 
 function App() {
     return (
@@ -15,10 +16,23 @@ function App() {
                     path: `${window.location.pathname}${window.location.search}`,
                     endpoint: 'https://kenan.bloomreach.io/delivery/site/v1/channels/getting-started/pages',
                     httpClient: axios
-                }} mapping={{Content, MyComponent}}>
+                }} mapping={{Content, MyComponent, MyContentComponent}}>
                 </BrPage>
 
             </header>
+        </div>
+    );
+}
+
+function MyContentComponent({component, page}) {
+
+    const {richText, multiple} = getContainerItemContent(component, page);
+
+    return (
+        <div>
+            <h3>{component.getName()}</h3>
+            {multiple.map(string => <h4>{string}</h4>)}
+            <div dangerouslySetInnerHTML={{__html: richText.value}}/>
         </div>
     );
 }
