@@ -13,6 +13,7 @@ function App() {
                     Edit <code>src/App.js</code> and save to reload.
                 </p>
                 <BrPage configuration={{
+                    path:`${window.location.pathname}${window.location.search}`,
                     endpoint: 'https://kenan.bloomreach.io/delivery/site/v1/channels/getting-started/pages',
                     httpClient: axios
                 }} mapping={{Content}}>
