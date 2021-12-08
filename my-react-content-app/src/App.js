@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import axios from "axios";
-import {BrComponent, BrPage} from "@bloomreach/react-sdk";
+import {BrPage} from "@bloomreach/react-sdk";
 import {Content} from "./components/Content";
 import {MyComponent} from "./components/MyComponent";
 
