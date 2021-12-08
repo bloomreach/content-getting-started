@@ -1,8 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import axios from "axios";
-import {BrPage} from "@bloomreach/react-sdk";
+import {BrComponent, BrPage} from "@bloomreach/react-sdk";
 import {Content} from "./components/Content";
+import {MyComponent} from "./components/MyComponent";
 
 function App() {
     return (
@@ -13,10 +14,10 @@ function App() {
                     Edit <code>src/App.js</code> and save to reload.
                 </p>
                 <BrPage configuration={{
-                    path:`${window.location.pathname}${window.location.search}`,
+                    path: `${window.location.pathname}${window.location.search}`,
                     endpoint: 'https://kenan.bloomreach.io/delivery/site/v1/channels/getting-started/pages',
                     httpClient: axios
-                }} mapping={{Content}}>
+                }} mapping={{Content, MyComponent}}>
                 </BrPage>
             </header>
         </div>
