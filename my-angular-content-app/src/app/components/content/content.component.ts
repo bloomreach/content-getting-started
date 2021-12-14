@@ -11,18 +11,18 @@ export class ContentComponent {
   @Input() page!: Page;
 
   get document() {
-    return this.page.getDocument<Document>()?.getData<DocumentData>();
+    return this.page.getDocument<Document>()?.getData<any>();
   }
 
 }
 
-interface DocumentData {
-  title: string;
-  introduction: string;
-  content: DocumentContent
-  [property: string]: any;
-}
-
-interface DocumentContent {
-  value: string;
-}
+// interface DocumentData {
+//   title: string;
+//   introduction: string;
+//   content: DocumentContent
+//   [property: string]: any;
+// }
+//
+// interface DocumentContent {
+//   value: string;
+// }
