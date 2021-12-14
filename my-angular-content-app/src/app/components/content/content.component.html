@@ -1,0 +1,8 @@
+<div *ngIf="document">
+  <h3>{{document.title}}</h3>
+  <p>{{document.introduction}}</p>
+  <div
+    *ngIf="document?.content"
+    [innerHTML]="page.rewriteLinks(page.sanitize(document!.content!.value))"
+  ></div>
+</div>
