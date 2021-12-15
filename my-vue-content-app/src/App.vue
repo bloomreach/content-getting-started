@@ -2,9 +2,9 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <br-page :configuration="configuration" :mapping="mapping">
-      <div>
+      <main>
         <br-component component="main"/>
-      </div>
+      </main>
     </br-page>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>

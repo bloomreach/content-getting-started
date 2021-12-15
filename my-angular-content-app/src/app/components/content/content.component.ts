@@ -13,7 +13,6 @@ export class ContentComponent {
   get document() {
     return this.page.getDocument<Document>()?.getData<any>();
   }
-
 }
 
 // interface DocumentData {
