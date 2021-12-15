@@ -12,7 +12,7 @@ import {ContainerComponent} from "./components/container.component";
 export class AppComponent {
   title = 'my-angular-content-app';
   configuration = {
-    path: `/`,
+    path: `${window.location.pathname}${window.location.search}`,
     endpoint: 'https://kenan.bloomreach.io/delivery/site/v1/channels/getting-started/pages',
     httpClient: axios
   }
