@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Component as BrComponent} from '@bloomreach/spa-sdk';
+import {Component as BrComponent, Page} from '@bloomreach/spa-sdk';
 
 @Component({
   selector: 'app-inline-container',
@@ -12,4 +12,5 @@ import {Component as BrComponent} from '@bloomreach/spa-sdk';
 })
 export class ContainerComponent {
   @Input() component!: BrComponent;
+  @Input() page!: Page;
 }
