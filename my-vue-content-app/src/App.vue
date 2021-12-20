@@ -14,6 +14,7 @@
 import HelloWorld from './components/HelloWorld.vue'
 import axios from "axios";
 import Content from "./components/Content";
+import MyComponent from "./components/MyComponent";
 
 export default {
   name: 'App',
@@ -27,7 +28,7 @@ export default {
         endpoint: 'https://kenan.bloomreach.io/delivery/site/v1/channels/getting-started/pages',
         httpClient: axios,
       },
-      mapping: {'Content': Content}
+      mapping: {Content, MyComponent}
     };
   }
 }

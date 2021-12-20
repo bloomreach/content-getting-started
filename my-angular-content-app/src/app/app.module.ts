@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { BrSdkModule } from "@bloomreach/ng-sdk";
 import { ContentComponent } from './components/content/content.component';
 import {ContainerComponent} from "./components/container.component";
+import {MyComponentComponent} from "./components/mycomponent/mycomponent.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     ContentComponent,
-    ContainerComponent
+    ContainerComponent,
+    MyComponentComponent
   ],
   imports: [
     BrowserModule,

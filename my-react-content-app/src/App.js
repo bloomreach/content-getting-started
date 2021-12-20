@@ -3,6 +3,7 @@ import './App.css';
 import axios from "axios";
 import {BrPage} from "@bloomreach/react-sdk";
 import {Content} from "./components/Content";
+import {MyComponent} from "./components/MyComponent";
 
 function App() {
     return (
@@ -16,7 +17,7 @@ function App() {
                     path: `${window.location.pathname}${window.location.search}`,
                     endpoint: 'https://kenan.bloomreach.io/delivery/site/v1/channels/getting-started/pages',
                     httpClient: axios
-                }} mapping={{Content}}>
+                }} mapping={{Content, MyComponent}}>
                 </BrPage>
             </header>
         </div>

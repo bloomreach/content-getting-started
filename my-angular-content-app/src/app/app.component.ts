@@ -3,6 +3,7 @@ import axios from "axios";
 import {ContentComponent} from "./components/content/content.component";
 import {TYPE_CONTAINER_NO_MARKUP} from "@bloomreach/spa-sdk";
 import {ContainerComponent} from "./components/container.component";
+import {MyComponentComponent} from "./components/mycomponent/mycomponent.component";
 
 @Component({
   selector: 'app-root',
@@ -15,5 +16,9 @@ export class AppComponent {
     endpoint: 'https://kenan.bloomreach.io/delivery/site/v1/channels/getting-started/pages',
     httpClient: axios
   }
-  mapping = {'Content': ContentComponent, [TYPE_CONTAINER_NO_MARKUP]: ContainerComponent}
+  mapping = {
+    'Content': ContentComponent,
+    'MyComponent': MyComponentComponent,
+    [TYPE_CONTAINER_NO_MARKUP]: ContainerComponent
+  }
 }
