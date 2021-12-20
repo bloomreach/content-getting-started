@@ -15,14 +15,3 @@ export class ContentComponent {
   }
 
 }
-
-// interface DocumentData {
-//   title: string;
-//   introduction: string;
-//   content: DocumentContent
-//   [property: string]: any;
-// }
-//
-// interface DocumentContent {
-//   value: string;
-// }
