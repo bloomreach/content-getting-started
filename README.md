@@ -15,9 +15,9 @@ This guide helps new developers get started with the platform. Step-by-step thro
 > For developers ready to step up to the next level, Bloomreach also provides a more extensive tutorial that goes more in-depth and uses the Reference SPA for a more real-world-like application context.
 
 
-##Before You Start
+## Before You Start
 
-###Prerequisites
+### Prerequisites
 
 Before you start this tutorial, make sure that:
 
@@ -26,7 +26,7 @@ Before you start this tutorial, make sure that:
 - You have the latest LTS version of Node.js installed and are familiar with using the Node package manager.
 - You have a Bloomreach Headless Experience Manager developer trial account. Contact Bloomreach to request your trial account if you don't have one yet.
 
-###Log in and Get Familiar With Headless Experience Manager
+### Log in and Get Familiar With Headless Experience Manager
 
 You should have received an email from Bloomreach containing the URL of your Headless Experience Manager developer trial account along with your log in details.
 
