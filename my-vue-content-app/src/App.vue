@@ -6,12 +6,10 @@
         <br-component component="main"/>
       </main>
     </br-page>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 import axios from "axios";
 import Content from "./components/Content";
 import MyComponent from "./components/MyComponent";
@@ -19,13 +17,12 @@ import MyComponent from "./components/MyComponent";
 export default {
   name: 'App',
   components: {
-    HelloWorld
   },
   data: () => {
     return {
       configuration: {
         path: `${window.location.pathname}${window.location.search}`,
-        endpoint: 'https://kenan.bloomreach.io/delivery/site/v1/channels/getting-started/pages',
+        endpoint: 'https://trial-vquwseqc.bloomreach.io/delivery/site/v1/channels/getting-started/pages',
         httpClient: axios,
       },
       mapping: {Content, MyComponent}
