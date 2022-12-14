@@ -7,13 +7,15 @@ import { BrSdkModule } from "@bloomreach/ng-sdk";
 import { ContentComponent } from './components/content/content.component';
 import {ContainerComponent} from "./components/container.component";
 import {MyComponentComponent} from "./components/mycomponent/mycomponent.component";
+import {BannerComponent} from "./components/banner/banner.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     ContentComponent,
     ContainerComponent,
-    MyComponentComponent
+    MyComponentComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,

@@ -4,6 +4,7 @@ import axios from "axios";
 import {BrPage} from "@bloomreach/react-sdk";
 import {Content} from "./components/Content";
 import {MyComponent} from "./components/MyComponent";
+import {Banner} from "./components/Banner";
 
 function App() {
     return (
@@ -15,9 +16,9 @@ function App() {
                 </p>
                 <BrPage configuration={{
                     path: `${window.location.pathname}${window.location.search}`,
-                    endpoint: 'https://kenan.bloomreach.io/delivery/site/v1/channels/getting-started/pages',
+                    endpoint: 'https://sandbox-sales02.bloomreach.io/delivery/site/v1/channels/getting-started/pages',
                     httpClient: axios
-                }} mapping={{Content, MyComponent}}>
+                }} mapping={{Content, MyComponent, Banner}}>
                 </BrPage>
             </header>
         </div>
