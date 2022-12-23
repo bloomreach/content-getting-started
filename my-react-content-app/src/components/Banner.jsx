@@ -1,9 +1,10 @@
 export function Banner({component, page}) {
 
     const content = component.getContent(page);
+    const properties = component.getProperties();
 
     return (
-        <div style={{backgroundColor: "grey", padding: '10px'}}>
+        <div style={{backgroundColor: properties['background-color'], padding: `${properties.padding}px`, textAlign: properties.alignment}}>
             <h2>{content.title}</h2>
             <div dangerouslySetInnerHTML={{__html: content.text.value}}/>
             <img src={page.getContent(content.image).getOriginal().getUrl()}/>

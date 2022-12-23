@@ -1,0 +1,7 @@
+<div style="background-color: grey; color: white; padding: 10px; position: relative">
+  <ng-container [brManageContentButton]="document"></ng-container>
+  <h2>{{ content?.title }}</h2>
+  <div *ngIf="content?.text" [innerHTML]="content?.text?.value"></div>
+  <img src="{{imageSrc}}" />
+  <p><a href="{{link}}">{{content?.ctalabel}}</a></p>
+</div>

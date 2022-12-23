@@ -16,6 +16,7 @@ import axios from "axios";
 import Content from "./components/Content";
 import MyComponent from "./components/MyComponent";
 import Banner from "./components/Banner";
+import SharedBanner from "./components/SharedBanner";
 
 export default {
   name: 'App',
@@ -29,7 +30,7 @@ export default {
         endpoint: 'https://sandbox-sales02.bloomreach.io/delivery/site/v1/channels/getting-started/pages',
         httpClient: axios,
       },
-      mapping: {Content, MyComponent, Banner}
+      mapping: {Content, MyComponent, Banner, SharedBanner}
     };
   }
 }

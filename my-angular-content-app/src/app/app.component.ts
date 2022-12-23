@@ -5,6 +5,7 @@ import {TYPE_CONTAINER_NO_MARKUP} from "@bloomreach/spa-sdk";
 import {ContainerComponent} from "./components/container.component";
 import {MyComponentComponent} from "./components/mycomponent/mycomponent.component";
 import {BannerComponent} from "./components/banner/banner.component";
+import {SharedBannerComponent} from "./components/sharedbanner/sharedbanner.component";
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,7 @@ export class AppComponent {
     'Content': ContentComponent,
     'MyComponent': MyComponentComponent,
     'Banner': BannerComponent,
+    'SharedBanner': SharedBannerComponent,
     [TYPE_CONTAINER_NO_MARKUP]: ContainerComponent
   }
 }

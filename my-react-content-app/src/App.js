@@ -5,6 +5,7 @@ import {BrPage} from "@bloomreach/react-sdk";
 import {Content} from "./components/Content";
 import {MyComponent} from "./components/MyComponent";
 import {Banner} from "./components/Banner";
+import {SharedBanner} from "./components/SharedBanner";
 
 function App() {
     return (
@@ -18,7 +19,7 @@ function App() {
                     path: `${window.location.pathname}${window.location.search}`,
                     endpoint: 'https://sandbox-sales02.bloomreach.io/delivery/site/v1/channels/getting-started/pages',
                     httpClient: axios
-                }} mapping={{Content, MyComponent, Banner}}>
+                }} mapping={{Content, MyComponent, Banner, SharedBanner}}>
                 </BrPage>
             </header>
         </div>

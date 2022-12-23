@@ -8,6 +8,7 @@ import { ContentComponent } from './components/content/content.component';
 import {ContainerComponent} from "./components/container.component";
 import {MyComponentComponent} from "./components/mycomponent/mycomponent.component";
 import {BannerComponent} from "./components/banner/banner.component";
+import {SharedBannerComponent} from "./components/sharedbanner/sharedbanner.component";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {BannerComponent} from "./components/banner/banner.component";
     ContentComponent,
     ContainerComponent,
     MyComponentComponent,
-    BannerComponent
+    BannerComponent,
+    SharedBannerComponent
   ],
   imports: [
     BrowserModule,
