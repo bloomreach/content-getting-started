@@ -6,7 +6,12 @@ export function SharedBanner({component, page}) {
     const content = properties.document && page.getContent(properties.document)?.getData();
 
     if (!content) {
-        return <p>No Banner reference set</p>
+        return (
+            <div style={{position: "relative"}}>
+                <BrManageContentButton parameter={'document'} documentTemplateQuery={'new-BannerDocument-document'}/>
+                <p>No Banner reference set</p>
+            </div>
+        )
     }
 
     return (
@@ -14,8 +19,8 @@ export function SharedBanner({component, page}) {
             <BrManageContentButton content={page.getContent(properties.document)}/>
             <h2>{content.title}</h2>
             <div dangerouslySetInnerHTML={{__html: content.text.value}}/>
-            <img src={page.getContent(content.image).getOriginal().getUrl()}/>
-            <p><a href={page.getContent(content.ctalink).getUrl()}>{content.ctalabel}</a></p>
+            <img src={page.getContent(content.image)?.getOriginal()?.getUrl()}/>
+            <p><a href={page.getContent(content.ctalink)?.getUrl()}>{content.ctalabel}</a></p>
         </div>
     );
 }
